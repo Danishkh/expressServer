@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 
+var port = process.env.PORT || 1236;
+
 var messages = [{text: 'some text', owner: 'Tim'},{text: 'other message', owner: 'Jane'}];
 
 app.use((req,res, next) => {
@@ -15,4 +17,4 @@ app.get('/messages', (req, res) => {
 
 
 
-app.listen(1236);
+app.listen(port);
