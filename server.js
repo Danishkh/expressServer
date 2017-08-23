@@ -9,10 +9,6 @@ var messages = [
     {text: 'other message', owner: 'Jane'}
 ];
 
-app.use(basicAuth({
-    users: { 'admin': 'supersecret' }
-}))
-
 app.use((req,res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
